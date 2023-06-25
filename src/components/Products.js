@@ -4,7 +4,7 @@ import { thunkAction } from "../redux/actions/fetchData";
 import "./data.css";
 import jsonToXlsx from "./download";
 
-const Data = () => {
+const Products = () => {
   const [search, setSearch] = useState("");
   const [view, setView] = useState(false);
   useEffect(() => {
@@ -12,10 +12,9 @@ const Data = () => {
   }, []);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
-  console.log(products);
 
   const [selectedItems, setSelectedItems] = useState([]);
-  console.log(selectedItems);
+
   const handleExport = () => {
     jsonToXlsx(
       products
@@ -110,4 +109,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default Products;

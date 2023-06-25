@@ -2,8 +2,8 @@ import React from "react";
 import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
-import { productsReducer } from "./redux/reducers/fetchReducer";
-import Data from "./components/Data";
+import { productsReducer } from "./redux/reducers/productsReducer";
+import Products from "./components/Products";
 
 const store = configureStore(
   {
@@ -15,7 +15,7 @@ const store = configureStore(
 function App() {
   return (
     <Provider store={store}>
-      <Data />
+      <Products />
     </Provider>
   );
 }
